@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/adrianizq/microservicios-tienda-integracion.git
+          searchPaths: config-data
+          username: ${GIT_USER}
+          password: ${GIT_PASSWORD}
+          default-label: "master"
+  #seguridad de spring cloud
+  security:
+    user:
+      name: root
+      password: s3cr3t
